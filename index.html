@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SWAN GROUP - Mattress & Bedding E-Commerce</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  .bg-primary-red { background-color: #ff4742; }
+  .text-primary-red { color: #ff4742; }
+  .border-primary-red { border-color: #ff4742; }
+  .hover-bg-red:hover { background-color: #e03e3a; }
+</style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+<!-- Top Bar -->
+<div class="bg-white border-b border-gray-200 py-2 px-4 text-xs text-gray-600">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <span><i class="fa-solid fa-phone text-primary-red mr-1"></i> +88 01755666484</span>
+      <span><i class="fa-solid fa-envelope text-primary-red mr-1"></i> marketing@swan-family.com</span>
+    </div>
+    <div class="hidden md:flex items-center space-x-4">
+      <span class="cursor-pointer hover:text-primary-red">Track Order</span>
+      <span class="cursor-pointer hover:text-primary-red">Support</span>
+      <span class="cursor-pointer hover:text-primary-red">Store Locator</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="bg-white shadow-sm py-4 px-4 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <div class="border-2 border-gray-800 p-1 text-center font-bold tracking-tighter">
+        <span class="text-xs block">SWAN</span>
+        <span class="text-[10px] block">SWAN GROUP</span>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="w-full md:w-1/2 flex">
+      <input type="text" placeholder="Search mattresses, pillows..." class="w-full border border-gray-300 rounded-l-lg px-4 py-2 text-sm focus:outline-none focus:border-primary-red">
+      <button class="bg-primary-red text-white px-6 rounded-r-lg font-semibold hover-bg-red text-sm transition"><i class="fa-solid fa-search"></i> SEARCH</button>
+    </div>
+
+    <!-- Wishlist & Cart Icons -->
+    <div class="flex items-center space-x-6">
+      <div class="relative cursor-pointer">
+        <i class="fa-regular fa-heart text-xl text-gray-700"></i>
+        <span class="absolute -top-2 -right-2 bg-primary-red text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+      </div>
+      <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleCartModal()">
+        <div class="relative">
+          <i class="fa-solid fa-cart-shopping text-xl text-gray-700"></i>
+          <span id="cartCount" class="absolute -top-2 -right-2 bg-primary-red text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </div>
+        <div class="text-left hidden sm:block">
+          <span class="text-[10px] text-gray-500 block">My cart</span>
+          <span id="cartTotal" class="text-xs font-bold text-gray-800">Tk 0.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center overflow-x-auto px-4">
+    <div class="bg-primary-red text-white px-5 py-3 font-bold text-sm flex items-center space-x-2 cursor-pointer shrink-0">
+      <i class="fa-solid fa-bars"></i>
+      <span>ALL CATEGORIES</span>
+    </div>
+    <div class="flex space-x-8 ml-6 text-sm font-semibold text-gray-700 shrink-0">
+      <a href="#" class="hover:text-primary-red py-3 border-b-2 border-primary-red">HOME</a>
+      <a href="#" class="hover:text-primary-red py-3">SHOP</a>
+      <a href="#" class="hover:text-primary-red py-3">PRODUCTS</a>
+      <a href="#" class="hover:text-primary-red py-3">CONTACT US</a>
+      <a href="#" class="hover:text-primary-red py-3">ABOUT US</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Body Layout -->
+<main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+  <!-- Left Sidebar -->
+  <aside class="space-y-6">
+    <!-- Top Rated Section -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+      <div class="bg-primary-red text-white text-xs font-bold px-3 py-2 rounded-t-lg -mx-4 -mt-4 mb-4">Toprated</div>
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3 border-b border-gray-100 pb-3">
+          <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=100" alt="Sofa Cum Bed" class="w-16 h-16 object-cover rounded-md border">
+          <div>
+            <span class="text-[10px] text-gray-400 block">Sofa Cum Bed</span>
+            <h4 class="text-xs font-bold text-gray-800">Swan Sofa Cum Bed</h4>
+            <span class="text-xs font-bold text-primary-red">Tk 15,500.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promo Banner / Pillow -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm text-center">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=300" alt="Pillow" class="w-full h-40 object-cover rounded-md mb-2">
+      <h3 class="font-bold text-sm text-gray-800">SWAN PILLOW</h3>
+      <p class="text-xs text-gray-500 mb-3">Supreme comfort for your healthy sleep.</p>
+      <button class="bg-primary-red text-white text-xs py-2 px-4 rounded font-semibold w-full hover-bg-red">Shop Now</button>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+      <div class="bg-primary-red text-white text-xs font-bold px-3 py-2 rounded-t-lg -mx-4 -mt-4 mb-4 flex justify-between items-center">
+        <span>Customer Testimonials</span>
+        <div class="space-x-1">
+          <i class="fa-solid fa-chevron-left text-[10px] cursor-pointer"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] cursor-pointer"></i>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=100" alt="Testimonial Product" class="w-24 h-24 mx-auto object-cover rounded mb-2">
+        <p class="text-xs text-gray-600 italic">"The pocket spring mattress gave me ultimate back support. Highly recommended!"</p>
+        <span class="text-[10px] font-bold text-gray-800 block mt-2">- Tanvir Ahmed, Dhaka</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product Catalog Section -->
+  <section class="lg:col-span-3 space-y-4">
+    <!-- Filter Toolbar -->
+    <div class="bg-white border border-gray-200 rounded-lg p-3 flex flex-wrap justify-between items-center text-xs shadow-sm">
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-gray-700">Filter:</span>
+        <select class="border border-gray-300 rounded px-2 py-1 outline-none">
+          <option>Availability</option>
+          <option>In Stock</option>
+        </select>
+        <select class="border border-gray-300 rounded px-2 py-1 outline-none">
+          <option>Price</option>
+          <option>Low to High</option>
+          <option>High to Low</option>
+        </select>
+      </div>
+      <div class="text-gray-500 font-medium">6 products found</div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="productGrid">
+      <!-- Product 1 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Pocket Spring Mattress</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 20,700.00</span>
+        </div>
+        <button onclick="addToCart('Swan Pocket Spring Mattress', 20700)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Bonnell Spring Mattress 6 Inch</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 8,820.00</span>
+        </div>
+        <button onclick="addToCart('Swan Bonnell Spring Mattress 6 Inch', 8820)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Bonnell Spring Mattress 9 & 10 Inch</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 11,790.00</span>
+        </div>
+        <button onclick="addToCart('Swan Bonnell Spring Mattress 9 & 10 Inch', 11790)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Orthopedic Foam Mattress</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 9,500.00</span>
+        </div>
+        <button onclick="addToCart('Swan Orthopedic Foam Mattress', 9500)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Luxury Velvet Red Mattress</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 14,200.00</span>
+        </div>
+        <button onclick="addToCart('Swan Luxury Velvet Red Mattress', 14200)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=400" alt="Mattress" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-xs font-bold text-gray-800 mb-1">Swan Floral Print Cotton Mattress</h3>
+          <span class="text-xs font-bold text-primary-red block mb-3">From Tk 6,400.00</span>
+        </div>
+        <button onclick="addToCart('Swan Floral Print Cotton Mattress', 6400)" class="bg-primary-red text-white text-xs py-2 rounded font-semibold hover-bg-red w-full transition">Add To Cart</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 px-4 mt-12 text-xs">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div>
+      <h4 class="font-bold mb-3 text-sm text-primary-red">SWAN GROUP</h4>
+      <p class="text-gray-400">Your trusted partner for high-quality mattresses, beds, and comfortable sleep solutions in Bangladesh.</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3 text-sm">Quick Links</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-white">About Us</a></li>
+        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3 text-sm">Customer Care</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-white">Payment Methods</a></li>
+        <li><a href="#" class="hover:text-white">Return & Refund</a></li>
+        <li><a href="#" class="hover:text-white">Shipping Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3 text-sm">Newsletter</h4>
+      <p class="text-gray-400 mb-2">Subscribe to get special offers and updates.</p>
+      <input type="email" placeholder="Your email address" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 mb-2 text-xs">
+      <button class="bg-primary-red text-white py-2 px-4 rounded w-full font-semibold hover-bg-red">Subscribe</button>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-4 text-center text-gray-500">
+    &copy; 2026 SWAN GROUP. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- JavaScript for Shopping Cart Interaction -->
+<script>
+  let cartCount = 0;
+  let cartTotalPrice = 0;
+
+  function addToCart(productName, price) {
+    cartCount += 1;
+    cartTotalPrice += price;
+    
+    document.getElementById('cartCount').innerText = cartCount;
+    document.getElementById('cartTotal').innerText = 'Tk ' + cartTotalPrice.toLocaleString() + '.00';
+    
+    alert(productName + ' has been added to your cart!');
+  }
+
+  function toggleCartModal() {
+    alert('You have ' + cartCount + ' item(s) in your cart. Total amount: Tk ' + cartTotalPrice.toLocaleString() + '.00');
+  }
+</script>
+
+</body>
+</html>
